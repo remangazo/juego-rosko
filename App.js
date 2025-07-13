@@ -94,7 +94,7 @@ const QuestionPanel = ({ question, onAnswer, onPass, answer, setAnswer, isMyTurn
                 <button onClick={onToggleMute} className="ml-4 text-gray-400 hover:text-cyan-300 transition-colors flex-shrink-0">{isMuted ? <VolumeXIcon className="w-7 h-7" /> : <Volume2Icon className="w-7 h-7" />}</button>
             </div>
             <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
-                <input type="text" value={answer} onChange={(e) => setAnswer(e.target.value)} placeholder="Escribe tu respuesta..." className="holographic-input flex-grow" autoFocus disabled={!isMyTurn} />
+                <input id="answer-input" name="answer" type="text" value={answer} onChange={(e) => setAnswer(e.target.value)} placeholder="Escribe tu respuesta..." className="holographic-input flex-grow" autoFocus disabled={!isMyTurn} />
                 <div className="flex gap-3">
                     <button type="submit" disabled={!isMyTurn} className="holographic-button w-full sm:w-auto bg-green-600 hover:bg-green-700 disabled:bg-gray-500 disabled:cursor-not-allowed"><CheckCircleIcon className="w-6 h-6" /><span>Enviar</span></button>
                     <button type="button" onClick={onPass} disabled={!isMyTurn} className="holographic-button w-full sm:w-auto bg-blue-600 hover:bg-blue-700 disabled:bg-gray-500 disabled:cursor-not-allowed"><SkipForwardIcon className="w-6 h-6" /><span>Pasapalabra</span></button>
@@ -593,7 +593,7 @@ const MultiplayerLobby = ({ onCreateGame, onJoinGame, userId }) => {
             <button onClick={onCreateGame} className="holographic-button w-full bg-purple-600 hover:bg-purple-700">Crear Partida Online</button>
             <div className="flex items-center"><div className="flex-grow border-t border-cyan-400/30"></div><span className="mx-4 text-cyan-300/80">o</span><div className="flex-grow border-t border-cyan-400/30"></div></div>
             <div className="flex flex-col sm:flex-row gap-3">
-                <input type="text" value={joinId} onChange={(e) => setJoinId(e.target.value)} placeholder="Ingresa ID de Partida" className="holographic-input flex-grow" />
+                <input id="join-id-input" name="joinId" type="text" value={joinId} onChange={(e) => setJoinId(e.target.value)} placeholder="Ingresa ID de Partida" className="holographic-input flex-grow" />
                 <button onClick={handleJoin} className="holographic-button w-full sm:w-auto bg-cyan-600 hover:bg-cyan-700">Unirse</button>
             </div>
             {error && <p className="text-red-400 mt-2">{error}</p>}
