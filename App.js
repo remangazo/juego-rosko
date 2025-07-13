@@ -540,8 +540,10 @@ export default function App() {
     };
 
     return (
-        <main className="min-h-screen w-full flex items-center justify-center font-['Poppins'] text-white bg-gray-900">
-            <div className="relative z-10 w-full h-full flex items-center justify-center p-4">{renderPage()}</div>
+        <main style={{ backgroundColor: '#0c0a18' }} className="min-h-screen w-full flex items-center justify-center font-['Poppins'] text-white overflow-hidden">
+            <div className="relative z-10 w-full h-full flex items-center justify-center p-4">
+                {renderPage()}
+            </div>
             <style>{`
                 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
                 :root { --glow-cyan: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff; }
