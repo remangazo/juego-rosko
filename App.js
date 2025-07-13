@@ -540,12 +540,12 @@ export default function App() {
     };
 
     return (
-        <main className="min-h-screen w-full flex items-center justify-center font-['Poppins'] text-white overflow-hidden bg-gray-900">
-            <div className="z-10 w-full h-full flex items-center justify-center p-4">{renderPage()}</div>
+        <main className="min-h-screen w-full flex items-center justify-center font-['Poppins'] text-white bg-gray-900">
+            <div className="relative z-10 w-full h-full flex items-center justify-center p-4">{renderPage()}</div>
             <style>{`
                 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
                 :root { --glow-cyan: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff; }
-                .holographic-panel { background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(0, 255, 255, 0.2); border-radius: 16px; box-shadow: 0 0 20px rgba(0, 255, 255, 0.1); }
+                .holographic-panel { background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(0, 255, 255, 0.2); border-radius: 16px; box-shadow: 0 0 20px rgba(0, 255, 255, 0.1); color: white; }
                 .holographic-button { display: flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: bold; transition: all 0.3s ease; border: 1px solid transparent; position: relative; overflow: hidden; }
                 .holographic-button:before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(120deg, transparent, rgba(0, 255, 255, 0.4), transparent); transition: all 0.5s; }
                 .holographic-button:hover:before { left: 100%; }
