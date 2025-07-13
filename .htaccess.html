@@ -1,0 +1,14 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  # Establece la ruta base a tu carpeta
+  RewriteBase /rosko/
+  
+  RewriteRule ^index\.html$ - [L]
+  
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-l
+  
+  # Redirige todo a tu index.html dentro de la carpeta
+  RewriteRule . /rosko/index.html [L]
+</IfModule>
